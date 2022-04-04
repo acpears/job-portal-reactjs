@@ -1,0 +1,21 @@
+{
+  "name": "sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./models",
+  "scripts": {
+    "start": "npx sequelize-cli db:migrate",
+    "clear": "npx sequelize-cli db:migrate:undo:all",
+    "seed": "npx sequelize-cli db:seed:all",
+    "init-database": "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate",
+    "init-data": "npx sequelize-cli db:seed:undo:all && npx sequelize-cli db:seed:all",
+    "init": "npm run init-database && npm run seed"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/register": "^7.16.9",
+    "mysql2": "^2.3.3",
+    "sequelize-cli": "^6.4.1"
+  }
+}
